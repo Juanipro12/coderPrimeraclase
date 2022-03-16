@@ -79,3 +79,20 @@
   color: rgb(247, 0, 0);
   text-shadow: -8px 8px 10px rgba(0,0,0,0.81);
 }
+.Carro{
+  height: 50px;
+  position: relative;
+  padding: 0 10px;
+ 
+}
+.cantidadProductos{
+  z-index: 3;
+  position: absolute;
+  top:64px;
+  right: 18px;
+  
+  padding: 10px;
+}
+.carrocompleto{
+  position: static;
+}
