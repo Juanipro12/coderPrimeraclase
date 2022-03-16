@@ -96,3 +96,20 @@
 .carrocompleto{
   position: static;
 }
+.input-botones{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: stretch;
+}
+.botones{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: stretch;
+}
+.mensaje{
+  flex: 1 1 auto;
+  background-color: rgb(240, 130, 130);
+  color: rgb(255, 255, 255);
+}
