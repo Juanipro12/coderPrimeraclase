@@ -7,7 +7,7 @@ export default function ListaCategorias({list}){
         {list.map(item => {
             return( 
             
-                <a href='.' className='item'>{item}</a>
+                <a key={item} href='.' className='item'>{item}</a>
             
             )
         })}

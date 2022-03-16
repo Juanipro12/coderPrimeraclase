@@ -18,13 +18,17 @@ export default function ItemCount({stock,initial,onAdd}) {
     
   return (
     <div>
-        <h1>Agregar al carrito</h1>
+        <h1>producto</h1>
         <div className='input-botones'>
             <div className='botones'>
                 <button onClick={()=>restar(-1)}>-</button>
                 <p>{inicial}</p>
                 <button onClick={()=>agregar(1)}>+</button>
             </div>
+            <button onClick={()=>{
+                onAdd(inicial);
+                setinicial(0)
+                }} >Agregar al carrito</button>
             <p className='mensaje'>{mensaje}</p>
             
         </div>
