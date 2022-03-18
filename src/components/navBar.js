@@ -1,4 +1,3 @@
-import React from 'react'
 import CartWidget from './CartWidget'
 import ListaCategorias from './ejerciciouno/ListaCategorias'
 import Logo from './ejerciciouno/Logo'
@@ -6,13 +5,17 @@ import Logo from './ejerciciouno/Logo'
 
 
 
-export default function NavBar() {
+export default function NavBar({onCategoria}) {
   const categorias = ["Remeras","Pantalones","Zapatillas","Accesorios"]
   const cantProductos= Math.floor((Math.random() * (100 - 1 + 1)) + 1);;
+  
+
   return (
     <div className="navbar" >
-      <Logo/>
-      <ListaCategorias list={categorias}/>
+      <span onClick={()=>onCategoria("")}>
+      <Logo  />
+      </span>
+      <ListaCategorias list={categorias} onCategoria={onCategoria} />
       <CartWidget cantProd={cantProductos}/>
     </div>
   )

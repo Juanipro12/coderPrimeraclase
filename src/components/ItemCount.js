@@ -7,18 +7,18 @@ export default function ItemCount({stock,initial,onAdd}) {
         inicial === 0 && x === -1? setmensaje("El valor no puede ser menor a 0"):setinicial(inicial+x);
         setTimeout(()=>{
             setmensaje("")
-        },2000)
+        },3000)
     }
     const agregar = (x)=>{
         inicial >= stock? setmensaje("Stock agotado"):setinicial(inicial+x);
         setTimeout(()=>{
             setmensaje("")
-        },2000)
+        },3000)
     }
     
   return (
     <div>
-        <h1>producto</h1>
+        
         <div className='input-botones'>
             <div className='botones'>
                 <button onClick={()=>restar(-1)}>-</button>

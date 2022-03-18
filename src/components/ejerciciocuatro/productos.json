@@ -1,0 +1,195 @@
+[
+    {
+        "id":0,
+        "nombre":"Remera Lisa Adidas",
+        "precio":50,
+        "categoria":"Remeras",
+        "img":"https://www.moovbydexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dwf1cf69b7/products/AD_FU3852/AD_FU3852-1.JPG",
+        "stock":10
+    },
+    {
+        "id":1,
+        "nombre":"Remera Nike Lisa",
+        "precio":50,
+        "categoria":"Remeras",
+        "img":"https://www.stockcenter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw6a12c32e/products/NI_AV4896-492/NI_AV4896-492-1.JPG",
+        "stock":10
+    },
+    {
+        "id":2,
+        "nombre":"Remera Lisa Batman",
+        "precio":30,
+        "categoria":"Remeras",
+        "img":"https://tap-multimedia-1172.nyc3.digitaloceanspaces.com/productimage/13957/1000001115429.jpg",
+        "stock":10
+    },
+    {
+        "id":3,
+        "nombre":"Remera Lisa Spider-Man",
+        "precio":30,
+        "categoria":"Remeras",
+        "img":"http://d3ugyf2ht6aenh.cloudfront.net/stores/029/842/products/spiderman1-9b05b42fc48df84fe516091948243717-640-0.jpg",
+        "stock":10
+    },
+    {
+        "id":4,
+        "nombre":"Remera Rolling Stone",
+        "precio":20,
+        "categoria":"Remeras",
+        "img":"http://d3ugyf2ht6aenh.cloudfront.net/stores/001/029/315/products/24-rolling-remera-orig71-6af9e527b9ace5fb9c16032211046213-640-0.png",
+        "stock":10
+    },
+    {
+        "id":5,
+        "nombre":"Remera Levi's",
+        "precio":20,
+        "categoria":"Remeras",
+        "img":"https://statics.glamit.com.ar/media/catalog/product/cache/179/base/500x750/9df78eab33525d08d6e5fb8d27136e95/l/e/levis_1778332010_0017_1_4.jpg",
+        "stock":10
+    },
+    {
+        "id":6,
+        "nombre":"Pantalon Jean",
+        "precio":25,
+        "categoria":"Pantalones",
+        "img":"https://www.instyle.es/medio/2019/02/04/pantalones-vaqueros-cropped-primavera-uterque_b2a5edab_1000x1499.jpg",
+        "stock":10
+    },
+    {
+        "id":7,
+        "nombre":"Pantalon Gabardina",
+        "precio":30,
+        "categoria":"Pantalones",
+        "img":"https://media.istockphoto.com/photos/mens-trousers-picture-id510615049?k=20&m=510615049&s=612x612&w=0&h=V2qWdnou1w6ctJnfiRlYxQp6QwgX8yRMBBOCMxm7ei0=",
+        "stock":10
+    },
+    {
+        "id":8,
+        "nombre":"Babuca Verde",
+        "precio":30,
+        "categoria":"Pantalones",
+        "img":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/aa9937ad-9c11-485b-a92c-dfff006a2a27/jordan-essentials-pantalon-de-tejido-fleece-2p2hws.png",
+        "stock":10
+    },
+    {
+        "id":9,
+        "nombre":"Pantalon Negro",
+        "precio":25,
+        "categoria":"Pantalones",
+        "img":"https://tottoelsalvador.vteximg.com.br/arquivos/ids/174652-1000-1000/Pantalon-para-Hombre-Jogger-Cristobal-negro-negro-black_2.jpg?v=636899232981730000",
+        "stock":10
+    },
+    {
+        "id":10,
+        "nombre":"Pantalon Nike",
+        "precio":20,
+        "categoria":"Pantalones",
+        "img":"https://redsport.vteximg.com.br/arquivos/ids/1075975-1000-1000/GA025203601.jpg?v=637463361086270000",
+        "stock":10
+    },
+    {
+        "id":11,
+        "nombre":"Pantalon Rayado",
+        "precio":20,
+        "categoria":"Pantalones",
+        "img":"https://static.carrefour.es/hd_350x_/crs/cdn_static/catalog/hd/394420_01_2.jpg",
+        "stock":10
+    },
+    {
+        "id":12,
+        "nombre":"Zapatilla Adidas Blancas",
+        "precio":30,
+        "categoria":"Zapatillas",
+        "img":"https://assets.adidas.com/images/w_600,f_auto,q_auto/7e03ecef81a64126bcecab58011051d8_9366/Zapatillas_Superstar_Bold_Mujer_Blanco_FV3336_01_standard.jpg",
+        "stock":10
+    },
+    {
+        "id":13,
+        "nombre":"Zapatillas New Balance Verde",
+        "precio":40,
+        "categoria":"Zapatillas",
+        "img":"https://www.newbalance.com.ar/media/catalog/product/cache/4/thumbnail/9df78eab33525d08d6e5fb8d27136e95/z/a/zapatillas-hombre-new-balance-x-90-msx90crh_nb_02_i.jpg",
+        "stock":10
+    },
+    {
+        "id":14,
+        "nombre":"Zapatillaz Adidas Negras",
+        "precio":30,
+        "categoria":"Zapatillas",
+        "img":"https://www.dexter.com.ar/dw/image/v2/BDTF_PRD/on/demandware.static/-/Sites-dabra-catalog/default/dw3bf3b7c8/products/AD_FX3593/AD_FX3593-1.JPG?sw=400&sh=400",
+        "stock":10
+    },
+    {
+        "id":15,
+        "nombre":"Zapatilas Nike",
+        "precio":30,
+        "categoria":"Zapatillas",
+        "img":"https://media.vogue.es/photos/6120c767358123b52e2edbbe/master/w_320%2Cc_limit/Captura%2520de%2520pantalla%25202021-08-21%2520a%2520las%252011.29.06.png",
+        "stock":10
+    },
+    {
+        "id":16,
+        "nombre":"Zapatillas Nike Verde",
+        "precio":40,
+        "categoria":"Zapatillas",
+        "img":"https://www.runningcorrer.com.ar/wprunning/wp-content/uploads/2020/12/nike-air-zoom-vomero-15-zapatillas-de-running-3.jpg",
+        "stock":10
+    },
+    {
+        "id":17,
+        "nombre":"Zapatillas Versace",
+        "precio":50,
+        "categoria":"Zapatillas",
+        "img":"https://www.versace.com/dw/image/v2/ABAO_PRD/on/demandware.static/-/Sites-ver-master-catalog/default/dw7608e36e/original/90_1004184-1A01759_2W110_20_GrecaTrainers-GrecaSneakers-versace-online-store_0_1.jpg?sw=450&sh=632&sm=fit&sfrm=jpg",
+        "stock":10
+    },
+    {
+        "id":18,
+        "nombre":"Billetera Negra",
+        "precio":10,
+        "categoria":"Accesorios",
+        "img":"https://static3.depositphotos.com/1005121/255/i/600/depositphotos_2551935-stock-photo-brown-old-wallet.jpg",
+        "stock":10
+    },
+    {
+        "id":19,
+        "nombre":"Billetera Marron",
+        "precio":15,
+        "categoria":"Accesorios",
+        "img":"https://cyzone.tiendabelcorp.com/cdn-cgi/image/width=1200,fit=contain,f=auto/https://belc-bigdata-mdm-images-prd.s3.amazonaws.com/images/FotoProductoFondoBlancoWebRedes/210097868_fotofondoblanco.jpg",
+        "stock":10
+    },
+    {
+        "id":20,
+        "nombre":"Cinto Negro",
+        "precio":5,
+        "categoria":"Accesorios",
+        "img":"https://taverniti.vteximg.com.br/arquivos/ids/172060-2000-2500/07020_602X2.jpg?v=636344094411970000",
+        "stock":10
+    },
+    {
+        "id":21,
+        "nombre":"Neceser Negro",
+        "precio":15,
+        "categoria":"Accesorios",
+        "img":"https://http2.mlstatic.com/D_NQ_NP_863893-MLA40902828217_022020-W.jpg",
+        "stock":10
+    },
+    {
+        "id":22,
+        "nombre":"Neceser Marron",
+        "precio":15,
+        "categoria":"Accesorios",
+        "img":"https://elcarterista.es/wp-content/uploads/2019/11/NeceserVintage.jpg",
+        "stock":10
+    },
+    {   
+        "id":23,
+        "nombre":"Reloj Cacio Retro",
+        "precio":30,
+        "categoria":"Accesorios",
+        "img":"http://d3ugyf2ht6aenh.cloudfront.net/stores/844/620/products/b-640wd-1a1-05a75d1fe7fa1ba23f15933014233306-640-0.jpg",
+        "stock":10
+    }
+    
+]

@@ -107,9 +107,38 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: stretch;
+  padding: 20px;
 }
 .mensaje{
   flex: 1 1 auto;
   background-color: rgb(240, 130, 130);
   color: rgb(255, 255, 255);
+}
+.card{
+  height: 448px;
+  width: 300px;
+  flex-direction: column;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  
+}
+.cardDentro{
+  height: 224px;
+  width: 300px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.imgCard{
+  object-fit:contain;
+  height: 80%;
+  padding: 5px;
+  
+}
+.itemListCont{
+  display: flex;
+  flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
