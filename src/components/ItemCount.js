@@ -4,7 +4,7 @@ export default function ItemCount({stock,initial,onAdd}) {
     const [inicial, setinicial] = useState(initial)
     const [mensaje, setmensaje] = useState("") 
     const restar = (x)=>{
-        inicial === 0 && x === -1? setmensaje("El valor no puede ser menor a 0"):setinicial(inicial+x);
+        inicial === 0 && x === -1? setmensaje("Error!"):setinicial(inicial+x);
         setTimeout(()=>{
             setmensaje("")
         },3000)
