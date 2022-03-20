@@ -4,23 +4,23 @@ import { CargarProductos } from './components/ejerciciocuatro/getFetch';
 import ItemListContainer from './components/ItemListContainer';
 import NavBar from './components/navBar';
 
-
+import logo from './components/ejerciciocuatro/Load_Icon.gif'
 
 function App() {
   const [categoria, setCategoria] = useState("")
   const [productos, setProductos] = useState([])
   const [auxProductos, setAuxProductos] = useState([])
-  const [cargando, setCargando] = useState(false)
+  const [cargando, setCargando] = useState(true)
   useEffect(() => {
-    CargarProductos
+    setTimeout(()=>{CargarProductos
     .then(
       resp => {
       setProductos(resp)
       setAuxProductos(resp)
     })
     .catch(err => console.log(err))
-    .finally()
-  }, [])
+    .finally(setCargando(false))},2000)
+  }, []);
   useEffect(() => {
     if(categoria === "") { 
       setAuxProductos(productos)
@@ -31,11 +31,12 @@ function App() {
     }
   }, [categoria])
   
-  
+  console.log(cargando)
   return (
     <div className="App">
       <NavBar onCategoria={(cat)=>setCategoria(cat)} />
-      <ItemListContainer Productos={auxProductos} />
+      { cargando ? <img src={logo} alt={"cargando"} />
+      :<ItemListContainer Productos={auxProductos} />}
     </div>
   );
 }
