@@ -12,7 +12,7 @@ export default function NavBar({onCategoria}) {
 
   return (
     <div className="navbar" >
-      <span onClick={()=>onCategoria("")}>
+      <span onClick={()=>onCategoria("inicio")}>
       <Logo  />
       </span>
       <ListaCategorias list={categorias} onCategoria={onCategoria} />
