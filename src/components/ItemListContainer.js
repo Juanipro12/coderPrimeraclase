@@ -3,16 +3,18 @@ import { CargarProductos } from './ejerciciocuatro/getFetch'
 import Item from './ejerciciocuatro/Item'
 import ItemCount from './ItemCount'
 import logo from './ejerciciocuatro/Load_Icon.gif'
+import { Link, useParams } from 'react-router-dom'
 
 
-export default function ItemListContainer({categoria, onGuardarProducto}) {
+export default function ItemListContainer({onGuardarProducto}) {
+  const {categoria} = useParams()
+    
     const add = (cantidadProductos)=>{
         cantidadProductos === 0
         ?console.log("No se agrego ningun producto")
         :console.log("Cantidad de productos agregados al carrito: "+cantidadProductos)
     }
     const [productos, setProductos] = useState([])
-    const [auxProductos, setAuxProductos] = useState([])
     const [cargando, setCargando] = useState(true)
     useEffect(() => {
         setTimeout(()=>{
@@ -20,20 +22,22 @@ export default function ItemListContainer({categoria, onGuardarProducto}) {
         .then(
           resp => {
           setProductos(resp)
-          setAuxProductos(resp)
         })
         .catch(err => console.log(err))
         .finally(setCargando(false))},2000)
+       
+        
       }, []);
-      useEffect(() => {
-        if(categoria === "inicio") { 
-          setAuxProductos(productos)
-        }
-        else{
-        const nuevoProductos = productos.filter(prod => { return (prod.categoria === categoria) })
-         setAuxProductos(nuevoProductos)
-        }
-      }, [categoria])
+      const cargar = (resultado) =>{
+       return resultado.map(prod => (
+          <div className='card'>
+                <Item key={`${prod.id}${prod.precio}`} Nombre={prod.nombre} Precio={prod.precio} Img={prod.img} />
+                <ItemCount key={prod.id} stock={prod.stock} initial={0} onAdd={add} />
+                <Link to={`/item/${prod.id}`}>Ver</Link>
+          </div>
+               )
+      )
+      }
   return (
       <div>
           {cargando ? 
@@ -46,13 +50,11 @@ export default function ItemListContainer({categoria, onGuardarProducto}) {
             <div className='itemListCont'>
                 
                 
-                    {auxProductos.map(prod => (<div className='card'>
-                        <Item key={`${prod.id}${prod.precio}`} Nombre={prod.nombre} Precio={prod.precio} Img={prod.img} />
-                        <ItemCount key={prod.id} stock={prod.stock} initial={0} onAdd={add} />
-                        <button onClick={()=> onGuardarProducto(prod)}>Ver</button>
-                    </div>))}
-        
-        
+                    {
+                      categoria === undefined?  cargar(productos):
+                    cargar(productos.filter(prod => { return (prod.categoria === categoria) }))
+                    }
+                    
     </div>
     </div>
     }

@@ -143,3 +143,15 @@
     flex-wrap: wrap;
     justify-content: space-around;
 }
+.cardDetalle{
+  height: 448px;
+    width: 100%;
+    flex-direction: row;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+a, a:visited, a:active{
+  text-decoration: none;
+  color: rgb(0, 0, 0) ;
+}

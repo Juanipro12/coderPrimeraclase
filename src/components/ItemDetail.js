@@ -8,12 +8,14 @@ export default function ItemDetail({item}) {
         :console.log("Cantidad de productos agregados al carrito: "+cantidadProductos)
     }
   return (
-    <div>
+    <div className='cardDetalle'>
         <img src={item.img} alt={item.nombre} />
-        <h2>{item.nombre}</h2>
-        <span>${item.precio}</span>
-        <p>Stock:{item.stock}</p>
-        <ItemCount key={item.id} stock={item.stock} initial={0} onAdd={add}/>
+        <div className='cardDescripcion'>
+              <h2>{item.nombre}</h2>
+              <span>${item.precio}</span>
+              <p>Stock:{item.stock}</p>
+              <ItemCount key={item.id} stock={item.stock} initial={0} onAdd={add}/>
+        </div>
     </div>
   )
 }

@@ -1,13 +1,14 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
-export default function ListaCategorias({list,onCategoria}){
+export default function ListaCategorias({list}){
     console.log(list)
   return (
     <div className='lista'>
         {list.map(item => {
             return( 
             
-                <span key={item} href='.' className='item' onClick={()=>onCategoria(item)}>{item}</span>
+                <NavLink key={item} to={`category/${item}`} className='item'>{item}</NavLink>
             
             )
         })}

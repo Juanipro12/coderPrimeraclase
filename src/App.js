@@ -1,23 +1,21 @@
-
 import './App.css';
-
 import ItemListContainer from './components/ItemListContainer';
 import NavBar from './components/navBar';
-import { useState } from 'react';
 import ItemDetailContainer from './components/ItemDetailContainer';
+import { Route, Routes } from 'react-router-dom';
+
+
+
 
 function App() {
-  const [categoria, setCategoria] = useState("")
-  const [Producto, setProducto] = useState("")
   return (
     <div className="App">
-      <NavBar onCategoria={(cat)=>setCategoria(cat)} />
-      
-      {Producto === "" || categoria !== ""?
-      <ItemListContainer categoria={categoria} onGuardarProducto={(prod)=>{setProducto(prod); setCategoria("")}} />:
-       <ItemDetailContainer producto={Producto} />
-      
-      }
+      <NavBar />
+      <Routes>
+      <Route path="/" element={<ItemListContainer/>}/>
+      <Route path="/category/:categoria" element={<ItemListContainer />}/>
+      <Route path="/item/:id" element={<ItemDetailContainer/>}/>
+      </Routes>
     </div>
   );
 }

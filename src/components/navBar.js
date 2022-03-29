@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import CartWidget from './CartWidget'
 import ListaCategorias from './ejerciciouno/ListaCategorias'
 import Logo from './ejerciciouno/Logo'
@@ -5,17 +6,17 @@ import Logo from './ejerciciouno/Logo'
 
 
 
-export default function NavBar({onCategoria}) {
+export default function NavBar() {
   const categorias = ["Remeras","Pantalones","Zapatillas","Accesorios"]
   const cantProductos= Math.floor((Math.random() * (100 - 1 + 1)) + 1);;
   
 
   return (
     <div className="navbar" >
-      <span onClick={()=>onCategoria("inicio")}>
+      <NavLink to={`/`}>
       <Logo  />
-      </span>
-      <ListaCategorias list={categorias} onCategoria={onCategoria} />
+      </NavLink>
+      <ListaCategorias list={categorias} />
       <CartWidget cantProd={cantProductos}/>
     </div>
   )

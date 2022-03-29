@@ -1,25 +1,20 @@
 import React, { useEffect, useState } from 'react'
 import ItemDetail from './ItemDetail'
 import logo from './ejerciciocuatro/Load_Icon.gif'
+import { getItem } from './ejerciciocuatro/getFetch'
+import { useParams } from 'react-router-dom'
 
-export default function ItemDetailContainer({producto}) {
+export default function ItemDetailContainer() {
+    const { id } = useParams()
     const [productoaver, setProductoaver] = useState("")
-    const getItem = new Promise((resolve,reject)=>{
-        if(true){
-           
-                resolve(producto)
-            
-        }else{
-            reject('400 not found')
-        }})    
     useEffect(()=>{
       setTimeout(async()=>{
-         const data = await getItem
+         const data = await getItem(Number(id))
          console.log(data)
          setProductoaver(data)
 
         },2000)
-    } ,[producto])
+    } ,[id])
     
   return (
      <div>
