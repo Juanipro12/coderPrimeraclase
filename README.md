@@ -1,6 +1,6 @@
-##JV STORES
+# JV STORES
 Es una store de ropa ficticia, un ecommerce de ropa que esta en desarrollo.
-##Para el desarrollo se implemeto:
+## Para el desarrollo se implemeto:
 -React Js
 -React Router DOM
 
