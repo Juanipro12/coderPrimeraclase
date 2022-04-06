@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom';
+import { useCartContext } from '../context/CartContext';
 import CartWidget from './CartWidget'
 import ListaCategorias from './ejerciciouno/ListaCategorias'
 import Logo from './ejerciciouno/Logo'
@@ -7,8 +8,11 @@ import Logo from './ejerciciouno/Logo'
 
 
 export default function NavBar() {
+
+  const { productosCart } = useCartContext()
   const categorias = ["Remeras","Pantalones","Zapatillas","Accesorios"]
-  const cantProductos= Math.floor((Math.random() * (100 - 1 + 1)) + 1);;
+
+  
   
 
   return (
@@ -17,7 +21,10 @@ export default function NavBar() {
       <Logo  />
       </NavLink>
       <ListaCategorias list={categorias} />
-      <CartWidget cantProd={cantProductos}/>
+      <NavLink to={`/cart`}>
+      <CartWidget cantProd={productosCart.length}/>
+      </NavLink>
+      
     </div>
   )
 }

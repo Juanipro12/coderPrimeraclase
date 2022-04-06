@@ -1,18 +1,20 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { CargarProductos } from './ejerciciocuatro/getFetch'
 import Item from './ejerciciocuatro/Item'
 import ItemCount from './ItemCount'
 import logo from './ejerciciocuatro/Load_Icon.gif'
 import { Link, useParams } from 'react-router-dom'
+import { useCartContext } from '../context/CartContext'
 
 
 export default function ItemListContainer({onGuardarProducto}) {
   const {categoria} = useParams()
+  const {agregarProducto} = useCartContext()
     
-    const add = (cantidadProductos)=>{
+    const add = (id,cantidadProductos)=>{
         cantidadProductos === 0
         ?console.log("No se agrego ningun producto")
-        :console.log("Cantidad de productos agregados al carrito: "+cantidadProductos)
+        :agregarProducto(id,cantidadProductos)
     }
     const [productos, setProductos] = useState([])
     const [cargando, setCargando] = useState(true)
@@ -32,7 +34,7 @@ export default function ItemListContainer({onGuardarProducto}) {
        return resultado.map(prod => (
           <div className='card'>
                 <Item key={`${prod.id}${prod.precio}`} Nombre={prod.nombre} Precio={prod.precio} Img={prod.img} />
-                <ItemCount key={prod.id} stock={prod.stock} initial={0} onAdd={add} />
+                <ItemCount key={prod.id} item={prod} stock={prod.stock} initial={0} onAdd={add} />
                 <Link to={`/item/${prod.id}`}>Ver</Link>
           </div>
                )

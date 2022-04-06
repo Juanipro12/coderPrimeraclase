@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-export default function ItemCount({stock,initial,onAdd}) {
+export default function ItemCount({item,stock,initial,onAdd}) {
     const [inicial, setinicial] = useState(initial)
     const [mensaje, setmensaje] = useState("") 
     const restar = (x)=>{
@@ -26,7 +26,7 @@ export default function ItemCount({stock,initial,onAdd}) {
                 <button onClick={()=>agregar(1)}>+</button>
             </div>
             <button onClick={()=>{
-                onAdd(inicial);
+                onAdd(item,inicial);
                 setinicial(0)
                 }} >Agregar al carrito</button>
             <p className='mensaje'>{mensaje}</p>
