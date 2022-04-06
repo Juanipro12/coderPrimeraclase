@@ -11,7 +11,7 @@ function CartContextProvider ({children}){
     }
     const agregarProducto = (item,cantidad)=>{
         
-        if(( productosCart.find( x => x.id === item.id)) === undefined){
+        if(( productosCart.find( x => x.item.id === item.id)) === undefined){
             setProductosCart([...productosCart,
                 {item,cantidad}
             ]

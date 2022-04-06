@@ -4,6 +4,7 @@ import { useCartContext } from '../context/CartContext'
 export default function CartaItem({item,cantidad}) {
     const {img , precio , nombre} = item
     const { removerProducto } = useCartContext()
+    
   return (
     <>
     <img src={img} alt={nombre}/>
