@@ -9,13 +9,9 @@ import { useCartContext } from '../context/CartContext'
 
 export default function ItemListContainer({onGuardarProducto}) {
   const {categoria} = useParams()
-  const {agregarProducto} = useCartContext()
+  const {add} = useCartContext()
     
-    const add = (id,cantidadProductos)=>{
-        cantidadProductos === 0
-        ?console.log("No se agrego ningun producto")
-        :agregarProducto(id,cantidadProductos)
-    }
+    
     const [productos, setProductos] = useState([])
     const [cargando, setCargando] = useState(true)
     useEffect(() => {

@@ -6,6 +6,11 @@ export const useCartContext =() => useContext(cartContext)
 
 function CartContextProvider ({children}){
     const [productosCart, setProductosCart] = useState([])
+    const add = (id,cantidadProductos)=>{
+        cantidadProductos === 0
+        ?console.log("No se agrego ningun producto")
+        :agregarProducto(id,cantidadProductos)
+    }
     const removerProducto = (id) =>{
         setProductosCart(productosCart.filter(x=>x.item.id !== id))
     }
@@ -29,7 +34,8 @@ function CartContextProvider ({children}){
      <cartContext.Provider value={{
         agregarProducto,
          productosCart,
-         removerProducto
+         removerProducto,
+         add
      }
      }>
          {children}
@@ -38,3 +44,4 @@ function CartContextProvider ({children}){
  )
 }
 export default CartContextProvider
+

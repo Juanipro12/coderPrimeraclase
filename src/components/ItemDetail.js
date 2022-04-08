@@ -3,12 +3,7 @@ import { useCartContext } from '../context/CartContext'
 import ItemCount from './ItemCount'
 
 export default function ItemDetail({item}) {
-    const { agregarProducto } = useCartContext()
-    const add = (id,cantidadProductos)=>{
-        cantidadProductos === 0
-        ?console.log("No se agrego ningun producto")
-        :agregarProducto(item,cantidadProductos)
-    }
+    const { add } = useCartContext()
   return (
     <div className='cardDetalle'>
         <img src={item.img} alt={item.nombre} />
