@@ -12,7 +12,7 @@ export default function NavBar() {
   const { productosCart } = useCartContext()
   const categorias = ["Remeras","Pantalones","Zapatillas","Accesorios"]
 
-  
+
   
 
   return (

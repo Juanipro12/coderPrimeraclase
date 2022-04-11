@@ -8,9 +8,10 @@ export default function CartaItem({item,cantidad}) {
   return (
     <>
     <img src={img} alt={nombre}/>
-    <p>${precio}</p>
+    <p>Precio unidad ${precio}</p>
     <h2>{nombre}</h2>
     <span>cantidad: {cantidad}</span>
+    <p>Monto:$ {precio*cantidad}</p>
     <button onClick={()=>removerProducto(item.id)}>eliminar</button>
     </>
   )

@@ -155,3 +155,38 @@ a, a:visited, a:active{
   text-decoration: none;
   color: rgb(0, 0, 0) ;
 }
+.cart{
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 80%;
+}
+.itemcart{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid black;
+  height: 600px;
+  width: 1fr;
+  margin: 5px 5px;
+  
+}
+.itemcart img{
+  width: 200px;
+  height: 200px;
+}
+.contedorcard{
+  display: flex;
+  justify-content: space-between;
+}
+.detallecart{
+  display: flex;
+  flex-direction: column;
+}
+.detallecartitem{
+  padding: 10px;
+  margin: 7px;
+}
