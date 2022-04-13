@@ -5,8 +5,9 @@ import ItemDetailContainer from './components/ItemDetailContainer';
 import { Route, Routes } from 'react-router-dom';
 import CartContextProvider from './context/CartContext'
 import Cart from './components/Cart';
+import { getFirestoreApp } from './firebase/config';
 
-
+getFirestoreApp()
 
 function App() {
   return (
