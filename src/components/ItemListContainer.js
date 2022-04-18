@@ -1,10 +1,11 @@
-import React, { useContext, useEffect, useState } from 'react'
-import { CargarProductos } from './ejerciciocuatro/getFetch'
+import React, { useEffect, useState } from 'react'
+
 import Item from './ejerciciocuatro/Item'
 import ItemCount from './ItemCount'
 import logo from './ejerciciocuatro/Load_Icon.gif'
 import { Link, useParams } from 'react-router-dom'
 import { useCartContext } from '../context/CartContext'
+import { collection, getDocs, getFirestore } from 'firebase/firestore'
 
 
 export default function ItemListContainer({onGuardarProducto}) {
@@ -15,17 +16,17 @@ export default function ItemListContainer({onGuardarProducto}) {
     const [productos, setProductos] = useState([])
     const [cargando, setCargando] = useState(true)
     useEffect(() => {
-        setTimeout(()=>{
-        CargarProductos
-        .then(
-          resp => {
-          setProductos(resp)
-        })
-        .catch(err => console.log(err))
-        .finally(setCargando(false))},2000)
+        setTimeout(async()=>{
+          const firestore = getFirestore()
+          const query = collection(firestore,'Productos')
+          const prod = await getDocs(query).then(resp => resp.docs.map(res=>({id:res.id,...res.data()})))
+          console.log(prod)
+          setProductos(prod)
+          setCargando(false)
+        },2000)
        
         
-      }, []);
+      }, [productos]);
       const cargar = (resultado) =>{
        return resultado.map(prod => (
           <div className='card'>
