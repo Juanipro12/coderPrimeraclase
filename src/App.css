@@ -190,3 +190,8 @@ a, a:visited, a:active{
   padding: 10px;
   margin: 7px;
 }
+.form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
