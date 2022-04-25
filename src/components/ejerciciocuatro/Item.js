@@ -1,8 +1,6 @@
 import React from 'react'
 
 export default function Item({Nombre,Precio,Img}) {
-  
-  
   return (
     <div className='cardDentro' >
         <h3>{Nombre}</h3>

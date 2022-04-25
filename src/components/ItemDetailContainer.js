@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import ItemDetail from './ItemDetail'
-import logo from './ejerciciocuatro/Load_Icon.gif'
 
 import { useParams } from 'react-router-dom'
 import { collection, getFirestore, where, query, getDocs } from 'firebase/firestore'
@@ -23,7 +22,7 @@ export default function ItemDetailContainer() {
   return (
      <div>
          {productoaver === ""?
-         <img src={logo} alt={"cargando"} />
+         <img src={"http://www.gifde.com/gif/otros/decoracion/cargando-loading/cargando-loading-048.gif"} alt={"cargando"} />
          :
         <ItemDetail item={productoaver}/>
     } 

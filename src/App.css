@@ -1,54 +1,16 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
 .navbar{
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: flex-end;
-  margin-top: 10px;
-  padding: 5px;
+  margin-top: 5px;
   background-color: #50a1e4;
 }
 .item{
   text-decoration: none;
-  padding-top: 10px;
+  
   color: rgb(0, 0, 0);
   font-size: 1.3em;
 }
@@ -80,21 +42,17 @@
   text-shadow: -8px 8px 10px rgba(0,0,0,0.81);
 }
 .Carro{
-  height: 50px;
-  position: relative;
-  padding: 0 10px;
- 
-}
-.cantidadProductos{
-  z-index: 3;
-  position: absolute;
-  top:64px;
-  right: 18px;
+  height: 30px;
   
-  padding: 10px;
 }
+
+
 .carrocompleto{
+   text-decoration: none;
   position: static;
+    display: flex;
+    flex-direction: row;
+    align-items:stretch;
 }
 .input-botones{
   display: flex;
@@ -151,8 +109,8 @@
     display: flex;
     justify-content: space-around;
 }
-a, a:visited, a:active{
-  text-decoration: none;
+a ,p, a:visited, a:active{
+  text-decoration: none !important;
   color: rgb(0, 0, 0) ;
 }
 .cart{
@@ -195,3 +153,38 @@ a, a:visited, a:active{
   flex-direction: column;
   align-items: center;
 }
+.pedidoExitoso{
+  display: flex;
+}
+
+.butonmenu{
+  align-self: flex-start;
+}
+.logocarro{
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.centrar{
+  margin:auto;
+  display:block;
+  width: 100%;
+}
+@media only screen and (max-width : 900px) {
+  .cart {
+    justify-content: center;
+
+  }
+  .contedorcard {
+    flex-direction: column;
+    align-items: center;
+  }
+  .detallecart {
+    align-items: center;
+  }
+  .TituloProductos{
+    text-align: center;
+  }
+
+  }

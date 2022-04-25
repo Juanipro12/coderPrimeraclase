@@ -6,6 +6,7 @@ import { Route, Routes } from 'react-router-dom';
 import CartContextProvider from './context/CartContext'
 import Cart from './components/Cart';
 import { getFirestoreApp } from './firebase/config';
+import PedidoExito from './pedidoexitos';
 
 getFirestoreApp()
 
@@ -19,6 +20,7 @@ function App() {
       <Route path="/category/:categoria" element={<ItemListContainer />}/>
       <Route path="/item/:id" element={<ItemDetailContainer/>}/>
       <Route path='/cart' element={<Cart/>}/>
+      <Route path='/pedidoexitoso' element={<PedidoExito/>}/>
       </Routes>
       </CartContextProvider>
     </div>

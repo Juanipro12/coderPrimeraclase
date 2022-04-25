@@ -8,31 +8,25 @@ function CartContextProvider ({children}){
     const [productosCart, setProductosCart] = useState([])
     const [total, settotal] = useState()
     useEffect( () =>{
-        let x=0
-        
-        for (const i of productosCart) {
-            x=x+i.item.precio*Number(i.cantidad)
-            
-        }
-        settotal(x)
-    },[productosCart])
+                let x=0
+                for (const i of productosCart) {
+                    x=x+i.item.precio*Number(i.cantidad)   
+                }
+                settotal(x)
+        },[productosCart])
     const vaciar = () =>{
         setProductosCart([])
-        
     }
     const add = (id,cantidadProductos)=>{
         cantidadProductos === 0
-        ?console.log("No se agrego ningun producto")
+        ?alert("No se agrego ningun producto")
         :agregarProducto(id,cantidadProductos)
         
     }
     const removerProducto = (id) =>{
-        setProductosCart(productosCart.filter(x=>x.item.id !== id))
-       
-        
+            setProductosCart(productosCart.filter(x=>x.item.id !== id))       
     }
     const agregarProducto = (item,cantidad)=>{
-        
         if(( productosCart.find( x => x.item.id === item.id)) === undefined){
             setProductosCart([...productosCart,
                 {item,cantidad}
